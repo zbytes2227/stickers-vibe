@@ -2,7 +2,8 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 
-const Header = () => {
+
+const Header = ({product}) => {
   return (
     <div>
 
@@ -24,7 +25,7 @@ const Header = () => {
                   </svg>
                 </div>
                 <h2 className="text-lg text-gray-900 font-medium title-font mb-2">Premium stickers</h2>
-                <p className="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit waist co, subway tile poke farm.</p>
+                <p className="leading-relaxed text-base">High-quality stickers with excellent adhesive and printing quality.</p>
               </div>
             </div>
             <div className="xl:w-1/3 md:w-1/2 p-4">
@@ -37,7 +38,7 @@ const Header = () => {
                   </svg>
                 </div>
                 <h2 className="text-lg text-gray-900 font-medium title-font mb-2">Waterproof and self-adhesive</h2>
-                <p className="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit waist co, subway tile poke farm.</p>
+                <p className="leading-relaxed text-base">Able to withstand exposure to water and other liquids while remaining firmly attached to surfaces.</p>
               </div>
             </div>
             <div className="xl:w-1/3 md:w-1/2 p-4">
@@ -49,17 +50,15 @@ const Header = () => {
                   </svg>
                 </div>
                 <h2 className="text-lg text-gray-900 font-medium title-font mb-2">Unique and diverse designs.</h2>
-                <p className="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit waist co, subway tile poke farm.</p>
+                <p className="leading-relaxed text-base">A wide range of designs that stand out and cater to different tastes and preferences.</p>
               </div>
             </div>
-
-
-
           </div>
           <Link href={'/stickers'}>
           <button className="flex mx-auto mt-16 text-white bg-green-500 border-0 py-2 px-6 focus:outline-none hover:bg-green-600 rounded text-lg">Shop Stickers Now</button>
           </Link>
         </div>
+
       </section>
     </div>
   )
