@@ -16,7 +16,7 @@ const Slug = ({ buyNow, addToCart, product }) => {
   const [service, setService] = useState()
   const checkPin = async (e) => {
     e.preventDefault();
-    const pins = await fetch(`${process.env.NEXT_PUBLIC_HOST}/api/pincode`)
+    const pins = await fetch(`/api/pincode`)
     const pincodes = await pins.json();
     console.log(pincodes);
     if (pincodes.includes((pin))) {
