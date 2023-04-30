@@ -1,6 +1,7 @@
 import Footer from '@/components/Footer'
 import Navbar from '@/components/Navbar'
 import '@/styles/globals.css'
+import Head from 'next/head'
 import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
 import { ToastContainer, toast } from 'react-toastify';
@@ -148,7 +149,15 @@ export default function App({ Component, pageProps }) {
     saveCart(newCart);
   }
   return <>
-
+    <Head>
+      <title>Skickers Vibe | Stick it Love it Share it</title>
+      <meta name="description" content="Stick it - love it - share it - Skickers Vibe" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <link rel="icon" href="/favicon.ico" />
+      <link rel="manifest" href="/manifest.json" />
+      <link rel="apple-touch-icon" href="/192.png"></link>
+      <meta name="theme-color" content="#fff" />
+    </Head>
     <LoadingBar
       color='#22C55E'
       height={4}
@@ -157,7 +166,7 @@ export default function App({ Component, pageProps }) {
       onLoaderFinished={() => setProgress(0)}
     />
 
-    { <Navbar user={user} logout={logout} key={key} Cart={Cart} addToCart={addToCart} clearCart={clearCart} removeFromCart={removeFromCart} subTotal={subTotal} /> }
+    {<Navbar user={user} logout={logout} key={key} Cart={Cart} addToCart={addToCart} clearCart={clearCart} removeFromCart={removeFromCart} subTotal={subTotal} />}
     <Component Cart={Cart} addToCart={addToCart} clearCart={clearCart} removeFromCart={removeFromCart} subTotal={subTotal} {...pageProps} buyNow={buyNow} />
     <Footer />
   </>
